@@ -10,4 +10,7 @@ shape_generator_samples/
 *.zip
 stl_files/
 blender_videos/
+25-abstract-stl/
+commands.txt
+25-abstract-animations/
 

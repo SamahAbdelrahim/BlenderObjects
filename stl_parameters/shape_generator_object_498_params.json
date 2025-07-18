@@ -1,0 +1,21 @@
+{
+    "complexity_level": 497,
+    "random_seed": 1730,
+    "num_extrusions": 10,
+    "min_extrude": 0.1,
+    "max_extrude": 0.30000000000000004,
+    "extrusion_range": 0.20000000000000004,
+    "min_rotation": 0,
+    "max_rotation": 30,
+    "rotation_range": 30,
+    "scale": [
+        2,
+        2,
+        2
+    ],
+    "location": [
+        0,
+        0,
+        0
+    ]
+}

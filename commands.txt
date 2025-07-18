@@ -1,5 +1,9 @@
 ## SamahAbdelrahim
 
+- blender python run:
+blender -b -P file.py
+
+- 
 videos.py 5-5
 
 Terminal 3 - 9
@@ -134,3 +138,73 @@ Apply more shape updates for higher complexity levels
 Bake the final result
 Properly track and return the generated object
 The rest of your script can remain unchanged as it's working correctly. This modification will ensure that each iteration creates a unique shape using the actual Shape Generator add-on functionality, with increasing complexity based on the number of update operations applied.
+
+see you're trying to set up the Python environment to run the data_spreadsheet.py script. The error message indicates that you're working in an externally managed environment on macOS. Let me help you set up a proper virtual environment to run this script:
+
+1. First, create a new virtual environment in your project directory:
+bash
+
+Run
+
+Open Folder
+
+1
+
+python3 -m venv venv
+
+2. Activate the virtual environment:
+bash
+
+Run
+
+Open Folder
+
+1
+
+source venv/bin/activate
+
+3. Install the required packages in the virtual environment:
+bash
+
+Run
+
+Open Folder
+
+1
+
+pip3 install pandas numpy
+
+4. Now you can run your script:
+bash
+
+Run
+
+Open Folder
+
+1
+
+python3 data_spreadsheet.py
+
+This approach will:
+
+1. Create an isolated Python environment for your project
+2. Install the required packages (pandas and numpy) without affecting your system Python
+3. Allow you to run your script with all necessary dependencies
+The virtual environment approach is recommended because:
+
+- It keeps your project dependencies isolated
+- Prevents conflicts with system Python packages
+- Makes your project more portable and reproducible
+- Follows Python best practices for package management
+After you're done working on the project, you can deactivate the virtual environment by typing:
+
+bash: deactivate
+
+https://www.google.com/search?q=convert+stl+files+to+video&sca_esv=8fe472cf0c0bad30&rlz=1C5MACD_enUS1025US1025&ei=ty9saJfRF6CD0PEPgY2BwAQ&ved=0ahUKEwjXiODYzKuOAxWgATQIHYFGAEgQ4dUDCBE&uact=5&oq=convert+stl+files+to+video&gs_lp=Egxnd3Mtd2l6LXNlcnAiGmNvbnZlcnQgc3RsIGZpbGVzIHRvIHZpZGVvMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHSIEHUABYAHABeAGQAQCYAQCgAQCqAQC4AQPIAQCYAgGgAgSYAwCIBgGQBgiSBwExoAcAsgcAuAcAwgcDMi0xyAcD&sclient=gws-wiz-serp
+
+
+https://www.google.com/search?q=convert+a+list+of+stl+files+in+a+folder+to+animation+rotation+using+bpy.ops.anim.insert_keyframe_animall()&rlz=1C5MACD_enUS1025US1025&oq=convert+a+list+of+stl+files+in+a+folder+to+animation+rotation+using+bpy.ops.anim.insert_keyframe_animall()+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTI2ODM2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+
+https://hamy.xyz/blog/blender-object-rotation-with-python#:~:text=First%20we%20import%20bpy%20which,render%20the%20rest%20for%20us!
+
+https://www.google.com/search?q=ERROR%3A+Ignored+the+following+versions+that+require+a+different+python+version%3A+2.82.1+Requires-Python+%3E%3D3.7%2C+%3C3.8+ERROR%3A+Could+not+find+a+version+that+satisfies+the+requirement+bpy+(from+versions%3A+none)+ERROR%3A+No+matching+distribution+found+for+bpy&rlz=1C5MACD_enUS1025US1025&oq=ERROR%3A+Ignored+the+following+versions+that+require+a+different+python+version%3A+2.82.1+Requires-Python+%3E%3D3.7%2C+%3C3.8+ERROR%3A+Could+not+find+a+version+that+satisfies+the+requirement+bpy+(from+versions%3A+none)+ERROR%3A+No+matching+distribution+found+for+bpy&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEHODUwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
