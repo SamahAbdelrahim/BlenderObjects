@@ -257,37 +257,30 @@ def render_video(output_path):
 # Ensure output directory exists
 os.makedirs(output_folder, exist_ok=True)
 
-# Recursively process all STL files in subfolders
-for root, dirs, files in os.walk(input_folder):
-    for filename in files:
-        if filename.lower().endswith(".stl"):
-            stl_path = os.path.join(root, filename)
-            # Compute relative path from input_folder
-            rel_dir = os.path.relpath(root, input_folder)
-            # Mirror the subfolder structure in output_folder
-            output_subfolder = os.path.join(output_folder, rel_dir)
-            os.makedirs(output_subfolder, exist_ok=True)
-            base_name = os.path.splitext(filename)[0]
-            output_path = os.path.join(output_subfolder, base_name + ".mp4")
+for filename in os.listdir(input_folder):
+    if filename.lower().endswith(".stl"):
+        print(f"Processing {filename}")
+        clear_scene()
+        
+        # Import STL file
+        stl_path = os.path.join(input_folder, filename)
+        bpy.ops.import_mesh.stl(filepath=stl_path)
+        obj = bpy.context.selected_objects[0]
+        normalize_scale(obj)  #  standardize object size
+        center_object_geometry(obj)  # to truly center geometry
+        
 
-            print(f"Processing {stl_path}")
-            clear_scene()
-            
-            # Import STL file
-            bpy.ops.import_mesh.stl(filepath=stl_path)
-            obj = bpy.context.selected_objects[0]
-            normalize_scale(obj)  #  standardize object size
-            center_object_geometry(obj)  # to truly center geometry
-            
-            # Setup scene, lighting, and camera
-            setup_scene(obj)
-            
-            # Animate rotation
-            animate_rotation(obj, frames)
-            
-            # Render video
-            render_video(output_path)
-            
-            print(f"✅ Rendered: {output_path}")
+        # Setup scene, lighting, and camera
+        setup_scene(obj)
+        
+        # Animate rotation
+        animate_rotation(obj, frames)
+        
+        # Render video
+        base_name = os.path.splitext(filename)[0]
+        output_path = os.path.join(output_folder, base_name + ".mp4")
+        render_video(output_path)
+        
+        print(f"✅ Rendered: {output_path}")
 
 print("✅ All STL files processed.")
