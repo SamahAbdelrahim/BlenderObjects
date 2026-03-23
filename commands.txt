@@ -2,6 +2,9 @@
 
 - blender python run:
 blender -b -P file.py
+blender -b -P fixed_blender_centering.py
+./blender-4.5.0-linux-x64/blender -b -P fixed_blender_centering.py
+./blender-4.5.0-linux-x64/blender -b -P fixed_blender_centering_copy.py
 
 - 
 videos.py 5-5

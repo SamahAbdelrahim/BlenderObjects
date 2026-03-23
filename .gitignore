@@ -10,7 +10,13 @@ shape_generator_samples/
 *.zip
 stl_files/
 blender_videos/
-25-abstract-stl/
+data/abstract-25/stl/
+data/abstract-25/animations/
+data/ALICE_stl_(Xu & Sandhofer, 2024)/animations/
 commands.txt
-25-abstract-animations/
+blender-4.5.0-linux-x64.zip
+blender-4.5.0-linux-x64/
+debian
+*.deb
+**/.DS_Store
 

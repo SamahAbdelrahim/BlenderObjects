@@ -1,0 +1,31 @@
+BlenderObjects — layout (March 2025)
+
+WHAT TO USE
+  fixed_blender_centering.py     Abstract-25 STL → MP4 (shared logic in scripts/stl_spin_render.py).
+  animate_alice_stl.py           ALICE stimuli (Xu & Sandhofer, 2024) — same render settings.
+  data/abstract-25/stl/          Input STLs (numbered subfolders 1–30, …).
+  data/abstract-25/animations/   Rendered MP4s (same folder layout as stl/).
+  data/ALICE_stl_(Xu & Sandhofer, 2024)/   30 flat STLs (1.stl … 30.stl) + LICENSE.
+  …/animations/                  MP4s written here by animate_alice_stl.py.
+
+scripts/
+  data_spreadsheet.py            Pandas utilities (paths inside may still point to your machine).
+  intentional_obj.py               (see file)
+  archive/                         Older animators, matplotlib/pyvista tests, one-off scripts.
+
+archive/
+  misc/                            Stray .deb packaging and debian/ tree (not needed for Blender).
+  scratch/                         Test outputs (e.g. test_animation.mp4 from archived tests).
+
+OTHER
+  blender-4.5.0-linux-x64/         Bundled Blender
+  venv/                            Python venv (non-bpy scripts)
+  stl_parameters/, stl_files_test/   Shape-generator / test inputs (see data_spreadsheet)
+  stimulus_database.csv            Exported table
+  archive/legacy-outputs/          Older animation folders (animations, animations_jul7th)
+
+Run (from this directory):
+  ./blender-4.5.0-linux-x64/blender -b -P fixed_blender_centering.py
+  ./blender-4.5.0-linux-x64/blender -b -P animate_alice_stl.py
+
+Paths in the main script are resolved from the file location, so cwd does not need to be the repo root.
